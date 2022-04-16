@@ -1,0 +1,77 @@
+.container {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #05466A;
+}
+
+.signin {
+    position: absolute;
+    left: 30px;
+    top: 17px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signin > h5 {
+    margin-top: 17px;
+}
+
+.logo-contact {
+    position: absolute;
+    top: 115px;
+    left: calc(50% - 126px);
+    width: 252px;
+    height: 200px;
+}
+
+.form {
+    position: absolute;
+    top: 394px;
+    left: calc(50% - 153.5px);
+    width: 307px;
+    height: 100px;
+}
+
+input {
+    width: 100%;
+    background: #1D3E53;
+    border: none;
+    height: 44px;
+    margin-top: 12px;
+}
+
+input:first-child {
+    margin-top: 0;
+}
+
+button {
+    position: absolute;
+    top: 585px;
+    left: calc(50% - 153.5px);
+    width: 307px;
+    height: 44px;
+    background: #E94560;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.image-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 671px) {
+    .container {
+        width: 390px;
+        height: 671px;
+        left: calc(50% - 195px);
+    }
+    
+}
