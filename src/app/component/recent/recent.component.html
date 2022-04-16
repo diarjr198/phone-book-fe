@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="header sticky-top">
+        <div class="top">
+            <span>Recent</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search contact">
+        </div>
+    </div>
+    <div class="content">
+        <section class="group">
+            <h5>A</h5>
+            <div class="contact">
+                <div class="profile">
+                    <fa-icon class="icon" [icon]="faUserSolid"></fa-icon>
+                </div>
+                <div class="info">
+                    <span>Alisson</span>
+                    <span>+6282134568923</span>
+                </div>
+                <div class="delete">
+                    <fa-icon [icon]="faStarSolid"></fa-icon>
+                </div>
+            </div>
+        </section>
+        <section class="group">
+            <h5>B</h5>
+            <div class="contact">
+                <div class="profile">
+                    <fa-icon class="icon" [icon]="faUserSolid"></fa-icon>
+                </div>
+                <div class="info">
+                    <span>Baistuta</span>
+                    <span>+6282134568923</span>
+                </div>
+                <div class="delete">
+                    <fa-icon [icon]="faStarSolid"></fa-icon>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="profile">
+                    <fa-icon class="icon" [icon]="faUserSolid"></fa-icon>
+                </div>
+                <div class="info">
+                    <span>Ballack</span>
+                    <span>+6282134568923</span>
+                </div>
+                <div class="delete">
+                    <fa-icon [icon]="faStarSolid"></fa-icon>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="menu">
+        <fa-icon class="icons" [icon]="faHistorySolid"></fa-icon>
+        <fa-icon routerLink="/contact" class="icons" [icon]="faUserRegular"></fa-icon>
+        <fa-icon routerLink="/favorites" class="icons" [icon]="faStarRegular"></fa-icon>
+    </div>
+</div>
