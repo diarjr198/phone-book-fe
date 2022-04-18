@@ -41,6 +41,11 @@ input {
     background: #1D3E53;
     border: none;
     height: 44px;
+    color: white
+}
+
+input:first-child {
+    margin-bottom: 12px;
 }
 
 input:last-child {
@@ -49,7 +54,7 @@ input:last-child {
 
 button {
     position: absolute;
-    top: 585px;
+    top: 150px;
     left: calc(50% - 153.5px);
     width: 307px;
     height: 44px;
