@@ -11,6 +11,7 @@
     margin-left: 20px;
     padding: 18px 0;
     cursor: pointer;
+    display: inline-block;
 }
 
 .back > h5 {
@@ -21,6 +22,18 @@
 
 .back > h5 {
     font-size: 16px;
+}
+
+.action {
+    display: inline-block; 
+    float: right;
+    padding: 18px 0;
+    margin-right: 20px;
+}
+
+.action > .icon {
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .image-profile {
@@ -74,4 +87,41 @@
 
 .sub-info > span {
     padding: 0 11px;
+}
+
+.input {
+    width: 281px;
+    height: 200px;
+    position: absolute;
+    left: calc(50% - 140.5px);
+    top: 300px;
+}
+
+.input input {
+    width: calc(271px / 2);
+    height: 53px;
+    background: #C4C4C4;
+    border-radius: 7px;
+    border: none;
+    margin-bottom: 13px;
+    padding: 0 14px;
+}
+
+.input input:first-child {
+    width: 100%;
+}
+
+.input input:nth-child(even) {
+    margin-right: 10px;
+}
+
+button {
+    width: 281px;
+    height: 53px;
+    background: #E94560;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 250px;
+    left: calc(50% - 140.5px);
 }
