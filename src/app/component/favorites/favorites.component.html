@@ -11,10 +11,10 @@
         <section class="group" *ngFor="let contact of contacts">
             <h5>{{contact.group}}</h5>
             <div class="contact" *ngFor="let view of contact.children">
-                <div class="profile">
+                <div class="profile" routerLink="{{'/view/'+view._id}}">
                     <fa-icon class="icon" [icon]="faUserSolid"></fa-icon>
                 </div>
-                <div class="info">
+                <div class="info" routerLink="{{'/view/'+view._id}}">
                     <span>{{view.name}}</span>
                     <span>{{view.telp}}</span>
                 </div>

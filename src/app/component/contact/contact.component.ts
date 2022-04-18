@@ -4,8 +4,8 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faHistory as faHistorySolid } from '@fortawesome/free-solid-svg-icons';
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { ContactService } from '../../_services/contact.service';
-import { Contact } from 'src/app/_models/Contact';
 import { SortContact } from 'src/app/_models/SortContact';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { Router } from '@angular/router';
@@ -21,6 +21,7 @@ export class ContactComponent implements OnInit {
 	faStarRegular = faStarRegular;
 	faStarSolid = faStarSolid;
 	faHistorySolid = faHistorySolid;
+	faPowerOff = faPowerOff;
 
 	contacts: SortContact[] = [];
 	isLoggedIn = false;
@@ -52,6 +53,11 @@ export class ContactComponent implements OnInit {
 			this.contacts = Object.values(contact);
 			console.log(this.contacts);
 		});
+	}
+
+	onLogout(): void {
+		this.tokenStorage.signOut();
+		window.location.reload();
 	}
 
 	onFavorite(id_contact: string) {
