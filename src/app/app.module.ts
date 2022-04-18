@@ -11,24 +11,23 @@ import { FavoritesComponent } from './component/favorites/favorites.component';
 import { RecentComponent } from './component/recent/recent.component';
 import { AddComponent } from './component/add/add.component';
 import { ViewComponent } from './component/view/view.component';
+import { FormsModule } from '@angular/forms';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    ContactComponent,
-    FavoritesComponent,
-    RecentComponent,
-    AddComponent,
-    ViewComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		LoginComponent,
+		RegisterComponent,
+		ContactComponent,
+		FavoritesComponent,
+		RecentComponent,
+		AddComponent,
+		ViewComponent
+	],
+	imports: [ BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule, HttpClientModule ],
+	providers: [ authInterceptorProviders ],
+	bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
