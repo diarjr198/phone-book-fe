@@ -3,36 +3,56 @@
         <fa-icon class="icon" [icon]="faArrowLeft"></fa-icon>
         <h5>Back</h5>
     </div>
+    <div class="action">
+        <fa-icon class="icon" [icon]="faEdit" (click)="onEdit()"></fa-icon>
+        <fa-icon class="icon" [icon]="faTrash" (click)="onDelete()"></fa-icon>
+    </div>
     <div class="image-profile">
         <fa-icon class="icon-profile" [icon]="faUserSolid"></fa-icon>
     </div>
-    <div class="title">
-        <h5>Michael Ballack</h5>
+    <div class="title" *ngIf="!isEdit">
+        <h5>{{contact.name}}</h5>
     </div>
-    <div class="info">
+    <div class="info" *ngIf="!isEdit">
         <div class="sub-info">
             <div class="icon">
                 <fa-icon class="icon-info" [icon]="faPhone"></fa-icon>
             </div>
-            <span>+62 812 2113 4111</span>
+            <span>{{contact.telp}}</span>
         </div>
         <div class="sub-info">
             <div class="icon">
                 <fa-icon class="icon-info" [icon]="faBuilding"></fa-icon>
             </div>
-            <span>Refactory</span>
+            <span>{{contact.company}}</span>
         </div>
         <div class="sub-info">
             <div class="icon">
                 <fa-icon class="icon-info" [icon]="faTools"></fa-icon>
             </div>
-            <span>Engineer</span>
+            <span>{{contact.job}}</span>
         </div>
         <div class="sub-info">
             <div class="icon">
                 <fa-icon class="icon-info" [icon]="faEnvelope"></fa-icon>
             </div>
-            <span>hahay@gmail.com</span>
+            <span>{{contact.email}}</span>
         </div>
+    </div>
+    <div class="input" *ngIf="isEdit">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit(id.value, name.value, phone.value, email.value, company.value, job.value)" #f="ngForm" novalidate>
+            <input type="hidden" [value]="contact._id" #id>
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="contact.name" required
+            #name autocomplete="off">
+            <input type="text" placeholder="Phone" name="phone" [(ngModel)]="contact.telp" required
+            #phone autocomplete="new-phone">
+            <input type="text" placeholder="Email" name="email" [(ngModel)]="contact.email" required
+            #email autocomplete="new-email">
+            <input type="text" placeholder="Company" name="company" [(ngModel)]="contact.company" required
+            #company autocomplete="new-company">
+            <input type="text" placeholder="Job" name="job" [(ngModel)]="contact.job" required
+            #job autocomplete="new-job">
+            <button>UPDATE</button>
+        </form>
     </div>
 </div>
