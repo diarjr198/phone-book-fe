@@ -6,11 +6,14 @@
         <img class="image-fit" src="../../../assets/img/logo_contact.jpg" alt="">
     </div>
     <div class="form">
-        <form action="">
-            <input class="p-3" type="text" placeholder="Name">
-            <input class="p-3" type="text" placeholder="Email">
-            <input class="p-3" type="password" placeholder="Password" style="margin-bottom:10px;">
+        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <input class="p-3" type="text" placeholder="Name" name="name" [(ngModel)]="form.name" required
+        #name="ngModel" autocomplete="off">
+            <input class="p-3" type="text" placeholder="Email" name="email" [(ngModel)]="form.email" required email
+        #email="ngModel" autocomplete="off">
+            <input class="p-3" type="password" placeholder="Password" style="margin-bottom:10px;" name="password"
+        [(ngModel)]="form.password" required minlength="8" #password="ngModel" autocomplete="off">
+    <button>REGISTER</button>
         </form>
     </div>
-    <button routerLink="/login">REGISTER</button>
 </div>

@@ -42,6 +42,7 @@ input {
     border: none;
     height: 44px;
     margin-top: 12px;
+    color: white;
 }
 
 input:first-child {
@@ -50,7 +51,7 @@ input:first-child {
 
 button {
     position: absolute;
-    top: 585px;
+    top: 190px;
     left: calc(50% - 153.5px);
     width: 307px;
     height: 44px;
