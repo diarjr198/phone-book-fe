@@ -7,11 +7,18 @@
         <fa-icon class="icon-profile" [icon]="faUserSolid"></fa-icon>
     </div>
     <div class="input">
-        <input type="text" placeholder="Name" autocomplete="none">
-        <input type="text" placeholder="Phone" autocomplete="none">
-        <input type="text" placeholder="Email" autocomplete="none">
-        <input type="text" placeholder="Company" autocomplete="none">
-        <input type="text" placeholder="Job" autocomplete="none">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="form.name" required
+            #name="ngModel" autocomplete="off">
+            <input type="text" placeholder="Phone" name="phone" [(ngModel)]="form.phone" required
+            #phone="ngModel" autocomplete="new-phone">
+            <input type="text" placeholder="Email" name="email" [(ngModel)]="form.email" required
+            #email="ngModel" autocomplete="new-email">
+            <input type="text" placeholder="Company" name="company" [(ngModel)]="form.company" required
+            #company="ngModel" autocomplete="new-company">
+            <input type="text" placeholder="Job" name="job" [(ngModel)]="form.job" required
+            #job="ngModel" autocomplete="new-job">
+            <button>CREATE NEW ACCOUNT</button>
+        </form>
     </div>
-    <button routerLink="/contact">CREATE NEW ACCOUNT</button>
 </div>

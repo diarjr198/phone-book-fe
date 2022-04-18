@@ -46,7 +46,7 @@
     top: 300px;
 }
 
-.input > input {
+.input input {
     width: calc(271px / 2);
     height: 53px;
     background: #C4C4C4;
@@ -56,11 +56,11 @@
     padding: 0 14px;
 }
 
-.input > input:first-child {
+.input input:first-child {
     width: 100%;
 }
 
-.input > input:nth-child(even) {
+.input input:nth-child(even) {
     margin-right: 10px;
 }
 
@@ -71,6 +71,6 @@ button {
     color: #fff;
     border: none;
     position: absolute;
-    top: 550px;
+    top: 250px;
     left: calc(50% - 140.5px);
 }
