@@ -59,6 +59,7 @@
     height: 43px;
     position: relative;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .profile {
@@ -116,6 +117,7 @@
     width: calc(100vw / 3);
     font-size: 31px;
     text-align: center;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 671px) {
